@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Çıktısı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<div class="container mt-5">
+    <h3 class="text-center text-success">✅ JSON Başarıyla Oluşturuldu</h3>
+
+    <div class="text-end mb-3">
+        <a href="{{ url_for('download', filename=json_file) }}" class="btn btn-primary">📥 JSON Dosyasını İndir</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">🔁 Yeni Dönüştürme</a>
+    </div>
+
+    <h5>🔍 Önizleme (İlk 10 Kayıt)</h5>
+    <pre>{{ preview_data }}</pre>
+</div>
+</body>
+</html>
